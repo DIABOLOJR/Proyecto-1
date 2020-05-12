@@ -25,6 +25,7 @@
 #include <xc.h>
 #include "8 bits.h"
 #include "uart.h"
+#include "SPI.h"
 
 int a;
 int POT;
@@ -32,19 +33,18 @@ int FOTO;
 int CONT;
 int OTRO;
 int b;
+void setup(void){
+    ANSEL = 0;
+    ANSELH = 0;
+    TRISC2 = 0;
+    
+    PORTCbits.RC2 = 1;
+    spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 
+}
 void main()
 {
-   LCDvalue();        // inicio de la LCD
-   clean();        // limpieza de la LCS
-   lcddirection(0,1,"Estuardo Mancio");     
-   lcddirection(5,2,"18027");             
-   delay_ms(130);
-   lcddirection(0,1,"LABORATORIO 5  ");     
-   lcddirection(5,2,"I2C  ");             
-   delay_ms(150);
-   lcddirection(0,1,"ADC  COUNTER FOT");
-   lcddirection(0,2," .  V       .  V");
+setup();
    UART_Init(9600);
    b = 0;
 
@@ -70,10 +70,15 @@ void main()
           OTRO = a;
           b = 0;
       }
-      POTENCIOMETRO(POT);
-      FOTORESIS(FOTO);
-      delay_ms(20);
-      POTENCIOMETRO(CONT);
-      FOTORESIS(OTRO);
+      
+      PORTCbits.RC2 = 0;       //Slave Select
+       __delay_ms(1);
+       
+      spiWrite(a);
+       
+       __delay_ms(1);
+       PORTCbits.RC2 = 1;
+       
+ 
    }
 }

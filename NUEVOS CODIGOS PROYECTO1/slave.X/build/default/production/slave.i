@@ -2731,6 +2731,43 @@ void UART_Write_Text(char *text)
 }
 # 27 "slave.c" 2
 
+# 1 "./SPI.h" 1
+# 17 "./SPI.h"
+typedef enum
+{
+    SPI_MASTER_OSC_DIV4 = 0b00100000,
+    SPI_MASTER_OSC_DIV16 = 0b00100001,
+    SPI_MASTER_OSC_DIV64 = 0b00100010,
+    SPI_MASTER_TMR2 = 0b00100011,
+    SPI_SLAVE_SS_EN = 0b00100100,
+    SPI_SLAVE_SS_DIS = 0b00100101
+}Spi_Type;
+
+typedef enum
+{
+    SPI_DATA_SAMPLE_MIDDLE = 0b00000000,
+    SPI_DATA_SAMPLE_END = 0b10000000
+}Spi_Data_Sample;
+
+typedef enum
+{
+    SPI_CLOCK_IDLE_HIGH = 0b00010000,
+    SPI_CLOCK_IDLE_LOW = 0b00000000
+}Spi_Clock_Idle;
+
+typedef enum
+{
+    SPI_IDLE_2_ACTIVE = 0b00000000,
+    SPI_ACTIVE_2_IDLE = 0b01000000
+}Spi_Transmit_Edge;
+
+
+void spiInit(Spi_Type, Spi_Data_Sample, Spi_Clock_Idle, Spi_Transmit_Edge);
+void spiWrite(char);
+unsigned spiDataReady();
+char spiRead();
+# 28 "slave.c" 2
+
 
 int a;
 int POT;
@@ -2738,19 +2775,18 @@ int FOTO;
 int CONT;
 int OTRO;
 int b;
+void setup(void){
+    ANSEL = 0;
+    ANSELH = 0;
+    TRISC2 = 0;
 
+    PORTCbits.RC2 = 1;
+    spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+
+}
 void main()
 {
-   LCDvalue();
-   clean();
-   lcddirection(0,1,"Estuardo Mancio");
-   lcddirection(5,2,"18027");
-   delay_ms(130);
-   lcddirection(0,1,"LABORATORIO 5  ");
-   lcddirection(5,2,"I2C  ");
-   delay_ms(150);
-   lcddirection(0,1,"ADC  COUNTER FOT");
-   lcddirection(0,2," .  V       .  V");
+setup();
    UART_Init(9600);
    b = 0;
 
@@ -2776,10 +2812,15 @@ void main()
           OTRO = a;
           b = 0;
       }
-      POTENCIOMETRO(POT);
-      FOTORESIS(FOTO);
-      delay_ms(20);
-      POTENCIOMETRO(CONT);
-      FOTORESIS(OTRO);
+
+      PORTCbits.RC2 = 0;
+       _delay((unsigned long)((1)*(8000000/4000.0)));
+
+      spiWrite(a);
+
+       _delay((unsigned long)((1)*(8000000/4000.0)));
+       PORTCbits.RC2 = 1;
+
+
    }
 }
