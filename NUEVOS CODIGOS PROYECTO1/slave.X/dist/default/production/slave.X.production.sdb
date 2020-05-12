@@ -1,0 +1,292 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F887 ]
+[d frameptr 0 ]
+"1 C:\Users\egman\Desktop\slave.X/uart.h
+[v _UART_Init UART_Init `(uc  1 e 1 0 ]
+"29
+[v _UART_Data_Ready UART_Data_Ready `(uc  1 e 1 0 ]
+"33
+[v _UART_Read UART_Read `(uc  1 e 1 0 ]
+"47
+[v _UART_Write UART_Write `(v  1 e 1 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"19 C:\Users\egman\Desktop\slave.X\LIBRERIALCD.c
+[v _delay_ms delay_ms `(v  1 e 1 0 ]
+"25
+[v _delay_us delay_us `(v  1 e 1 0 ]
+"30
+[v _Tiempocontrol Tiempocontrol `(v  1 e 1 0 ]
+"37
+[v _Control Control `(v  1 e 1 0 ]
+"44
+[v _ON ON `(v  1 e 1 0 ]
+"51
+[v _LCDvalue LCDvalue `(v  1 e 1 0 ]
+"66
+[v _impresion impresion `(v  1 e 1 0 ]
+"73
+[v _lcddirection lcddirection `(v  1 e 1 0 ]
+"150
+[v _POTENCIOMETRO POTENCIOMETRO `(v  1 e 1 0 ]
+"204
+[v _FOTORESIS FOTORESIS `(v  1 e 1 0 ]
+"257
+[v _clean clean `(v  1 e 1 0 ]
+"36 C:\Users\egman\Desktop\slave.X\slave.c
+[v _main main `(v  1 e 1 0 ]
+"228 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+[s S107 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"369
+[u S116 . 1 `S107 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES116  1 e 1 @8 ]
+"1133
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1140
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"1478
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+[s S129 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"1619
+[u S138 . 1 `S129 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES138  1 e 1 @136 ]
+"2642
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"3695
+[v _BRGH BRGH `VEb  1 e 0 @1218 ]
+"3836
+[v _CREN CREN `VEb  1 e 0 @196 ]
+"4175
+[v _RCIF RCIF `VEb  1 e 0 @101 ]
+"4259
+[v _SPEN SPEN `VEb  1 e 0 @199 ]
+"4313
+[v _SYNC SYNC `VEb  1 e 0 @1220 ]
+"4466
+[v _TRISC6 TRISC6 `VEb  1 e 0 @1086 ]
+"4469
+[v _TRISC7 TRISC7 `VEb  1 e 0 @1087 ]
+"4508
+[v _TRMT TRMT `VEb  1 e 0 @1217 ]
+"4538
+[v _TXEN TXEN `VEb  1 e 0 @1221 ]
+"29 C:\Users\egman\Desktop\slave.X\slave.c
+[v _a a `i  1 e 2 0 ]
+"30
+[v _POT POT `i  1 e 2 0 ]
+"31
+[v _FOTO FOTO `i  1 e 2 0 ]
+"32
+[v _CONT CONT `i  1 e 2 0 ]
+"33
+[v _OTRO OTRO `i  1 e 2 0 ]
+"34
+[v _b b `i  1 e 2 0 ]
+"36
+[v _main main `(v  1 e 1 0 ]
+{
+"79
+} 0
+"257 C:\Users\egman\Desktop\slave.X\LIBRERIALCD.c
+[v _clean clean `(v  1 e 1 0 ]
+{
+"259
+} 0
+"33 C:\Users\egman\Desktop\slave.X/uart.h
+[v _UART_Read UART_Read `(uc  1 e 1 0 ]
+{
+"38
+} 0
+"1
+[v _UART_Init UART_Init `(uc  1 e 1 0 ]
+{
+"3
+[v UART_Init@x x `ui  1 a 2 9 ]
+"1
+[v UART_Init@baudrate baudrate `DCl  1 p 4 6 ]
+"22
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+{
+"10
+[v ___aldiv@quotient quotient `l  1 a 4 2 ]
+"11
+[v ___aldiv@sign sign `uc  1 a 1 1 ]
+[v ___aldiv@counter counter `uc  1 a 1 0 ]
+"5
+[v ___aldiv@divisor divisor `l  1 p 4 0 ]
+[v ___aldiv@dividend dividend `l  1 p 4 4 ]
+"41
+} 0
+"29 C:\Users\egman\Desktop\slave.X/uart.h
+[v _UART_Data_Ready UART_Data_Ready `(uc  1 e 1 0 ]
+{
+"32
+} 0
+"150 C:\Users\egman\Desktop\slave.X\LIBRERIALCD.c
+[v _POTENCIOMETRO POTENCIOMETRO `(v  1 e 1 0 ]
+{
+[v POTENCIOMETRO@result result `uc  1 a 1 wreg ]
+"160
+[v POTENCIOMETRO@i i `i  1 a 2 20 ]
+"159
+[v POTENCIOMETRO@numero numero `[3]i  1 a 6 9 ]
+"155
+[v POTENCIOMETRO@coordenada coordenada `uc  1 a 1 24 ]
+"154
+[v POTENCIOMETRO@valor valor `uc  1 a 1 23 ]
+"158
+[v POTENCIOMETRO@centesimas centesimas `uc  1 a 1 17 ]
+"157
+[v POTENCIOMETRO@decimas decimas `uc  1 a 1 16 ]
+"156
+[v POTENCIOMETRO@unidades unidades `uc  1 a 1 15 ]
+"150
+[v POTENCIOMETRO@result result `uc  1 a 1 wreg ]
+[v POTENCIOMETRO@result result `uc  1 a 1 22 ]
+"202
+} 0
+"51
+[v _LCDvalue LCDvalue `(v  1 e 1 0 ]
+{
+"64
+} 0
+"204
+[v _FOTORESIS FOTORESIS `(v  1 e 1 0 ]
+{
+[v FOTORESIS@result result `uc  1 a 1 wreg ]
+"212
+[v FOTORESIS@i i `i  1 a 2 20 ]
+"211
+[v FOTORESIS@numero numero `[3]i  1 a 6 9 ]
+"207
+[v FOTORESIS@coordenada coordenada `uc  1 a 1 24 ]
+"206
+[v FOTORESIS@valor valor `uc  1 a 1 23 ]
+"210
+[v FOTORESIS@centesimas centesimas `uc  1 a 1 17 ]
+"209
+[v FOTORESIS@decimas decimas `uc  1 a 1 16 ]
+"208
+[v FOTORESIS@unidades unidades `uc  1 a 1 15 ]
+"204
+[v FOTORESIS@result result `uc  1 a 1 wreg ]
+[v FOTORESIS@result result `uc  1 a 1 22 ]
+"254
+} 0
+"73
+[v _lcddirection lcddirection `(v  1 e 1 0 ]
+{
+"74
+[v lcddirection@posicion posicion `uc  1 a 1 0 ]
+"73
+[v lcddirection@x x `i  1 p 2 8 ]
+[v lcddirection@y y `i  1 p 2 10 ]
+[v lcddirection@valor valor `*.24uc  1 p 1 12 ]
+"88
+} 0
+"66
+[v _impresion impresion `(v  1 e 1 0 ]
+{
+[v impresion@valor valor `*.24uc  1 a 1 wreg ]
+[v impresion@valor valor `*.24uc  1 a 1 wreg ]
+[v impresion@valor valor `*.24uc  1 a 1 7 ]
+"71
+} 0
+"44
+[v _ON ON `(v  1 e 1 0 ]
+{
+[v ON@valor1 valor1 `uc  1 a 1 wreg ]
+[v ON@valor1 valor1 `uc  1 a 1 wreg ]
+[v ON@valor1 valor1 `uc  1 a 1 5 ]
+"49
+} 0
+"37
+[v _Control Control `(v  1 e 1 0 ]
+{
+[v Control@valor valor `uc  1 a 1 wreg ]
+[v Control@valor valor `uc  1 a 1 wreg ]
+[v Control@valor valor `uc  1 a 1 7 ]
+"42
+} 0
+"19
+[v _delay_ms delay_ms `(v  1 e 1 0 ]
+{
+"21
+[v delay_ms@j j `i  1 a 2 5 ]
+"20
+[v delay_ms@i i `i  1 a 2 3 ]
+"19
+[v delay_ms@dms dms `i  1 p 2 0 ]
+"23
+} 0
+"30
+[v _Tiempocontrol Tiempocontrol `(v  1 e 1 0 ]
+{
+"35
+} 0
+"25
+[v _delay_us delay_us `(v  1 e 1 0 ]
+{
+"26
+[v delay_us@i i `i  1 a 2 3 ]
+"25
+[v delay_us@dus dus `i  1 p 2 0 ]
+"27
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"34
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 2 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 1 ]
+[v ___awdiv@counter counter `uc  1 a 1 0 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 7 ]
+[v ___awdiv@dividend dividend `i  1 p 2 9 ]
+"41
+} 0
