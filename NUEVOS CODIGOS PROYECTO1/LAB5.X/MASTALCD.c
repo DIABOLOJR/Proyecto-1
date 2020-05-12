@@ -41,13 +41,13 @@ void Properties (void){
     ANSEL = 0;
     ANSELH = 0;
     TRISA = 0;
-    I2C_Master_Init(100000);
+    I2C_Master_Init(100000); //inicializacion del I2C en modo master 
     J = 0;
     POT = 0;
     FOTO = 0;
     CONT = 0;
     OTRO =0;
-    UART_Init(9600);
+    UART_Init(9600); //Inicializacion del UART con baudrate de 9600
 
 }
 
@@ -84,8 +84,8 @@ void main(void) {
 
         
         if (a == 0){
-        UART_Write(POT);
-        a++;    
+        UART_Write(POT); // envio de datos por medio de USART
+        a++;// aumento de variable interna para decision del dato a mandar en USART
         }
         else if (a == 1){
         UART_Write(FOTO);
@@ -102,7 +102,5 @@ void main(void) {
         else{
         a = 0;
         }
-
-//Funciones de LCD para mappear los valor del I2C
     }
 }
