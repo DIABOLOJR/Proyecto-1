@@ -25,7 +25,7 @@
 #include "ADC.h"
 #include "I2C.h"
 
-
+//Este codigo se utilizo para los 4 sensores cambiando las direcciones de los pic slaves entre 0X50,0X52,0X54 y 0X56.
 
 #define _XTAL_FERQ 8000000
 
