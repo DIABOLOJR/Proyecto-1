@@ -33,30 +33,30 @@ int FOTO;
 int CONT;
 int OTRO;
 int b;
-void setup(void){
+void setup(void){ //Configuracion del PIC
     ANSEL = 0;
     ANSELH = 0;
     TRISC2 = 0;
     
     PORTCbits.RC2 = 1;
-    spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+    spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE); //Inicializacion del SPI
 
 }
 void main()
 {
 setup();
-   UART_Init(9600);
+   UART_Init(9600); // Inicializacion del USART
    b = 0;
 
    while (1){
       if(UART_Data_Ready()){
-        a = UART_Read();
+        a = UART_Read();// Lectura del USART
       
        __delay_ms(100);
       }
       if (b == 0){
-          POT = a;
-          b++;
+          POT = a;// ALmacenamiento del dato leido en una variable especifica 
+          b++; // aumento de variable interna para seleccion de donde se almacenara la variable 
       }
       else if (b == 1){
           FOTO = a;
@@ -74,10 +74,10 @@ setup();
       PORTCbits.RC2 = 0;       //Slave Select
        __delay_ms(1);
        
-      spiWrite(a);
+      spiWrite(a); //Envio de variable por medio del SPI
        
        __delay_ms(1);
-       PORTCbits.RC2 = 1;
+       PORTCbits.RC2 = 1; //Slave deselect
        
  
    }
