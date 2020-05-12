@@ -18,18 +18,18 @@
 // Use project enums instead of #define for ON and OFF.
 
 //*****************************************************************************
-// Definici髇 e importaci髇 de librer韆s
+// Definici贸n e importaci贸n de librer铆as
 //*****************************************************************************
 #include <xc.h>
 #include <stdint.h>
 #include "SPI.h"
 #include "8 bits.h"
 //*****************************************************************************
-// Definici髇 de variables
+// Definici贸n de variables
 //*****************************************************************************
 #define _XTAL_FREQ 8000000
 //*****************************************************************************
-// Definici髇 de funciones para que se puedan colocar despu閟 del main de lo 
+// Definici贸n de funciones para que se puedan colocar despu茅s del main de lo 
 // contrario hay que colocarlos todas las funciones antes del main
 //*****************************************************************************
 void setup(void);
@@ -40,13 +40,13 @@ int FOTO;
 int CONT;
 int OTRO;
 //*****************************************************************************
-// C骴igo de Interrupci髇 
+// C贸digo de Interrupci贸n 
 //*****************************************************************************
 void __interrupt() isr(void){
-   if(SSPIF == 1){
+   if(SSPIF == 1){ // interrupcion del SPI debido a SLAVE
        if (a < 3){
-           J = spiRead();
-           a++;
+           J = spiRead();//Almacenamiento del valor leido del SPI en variable 
+           a++;// aumento de variable interna 
        }
        else if (a == 3){
            J = spiRead();
@@ -60,7 +60,7 @@ void __interrupt() isr(void){
     }
 }
 //*****************************************************************************
-// C骴igo Principal
+// C贸digo Principal
 //*****************************************************************************
 void main(void) {
     LCDvalue();        // inicio de la LCD
@@ -78,8 +78,8 @@ void main(void) {
     // Loop infinito
     //*************************************************************************
     while(1){
-        if (a == 0){
-            POT = J;
+        if (a == 0){//lectura de variable interna 
+            POT = J; // almacenamiento de variable en una variable especifica para despliegue 
         }
         else if (a == 1){
             FOTO = J;
@@ -90,8 +90,8 @@ void main(void) {
         else if (a == 3){
             OTRO = J;
         }
-        POTENCIOMETRO(POT);
-        FOTORESIS(FOTO);
+        POTENCIOMETRO(POT);// despliegue en pantalla LCD pos 1
+        FOTORESIS(FOTO);// despliegue en pantalla LCD pos 2
         delay_ms(20);
         POTENCIOMETRO(CONT);
         FOTORESIS(OTRO);
@@ -99,7 +99,7 @@ void main(void) {
     return;
 }
 //*****************************************************************************
-// Funci髇 de Inicializaci髇
+// Funci贸n de Inicializaci贸n
 //*****************************************************************************
 void setup(void){
     ANSEL = 0;
@@ -113,11 +113,11 @@ void setup(void){
     
     INTCONbits.GIE = 1;         // Habilitamos interrupciones
     INTCONbits.PEIE = 1;        // Habilitamos interrupciones PEIE
-    PIR1bits.SSPIF = 0;         // Borramos bandera interrupci髇 MSSP
-    PIE1bits.SSPIE = 1;         // Habilitamos interrupci髇 MSSP
+    PIR1bits.SSPIF = 0;         // Borramos bandera interrupci贸n MSSP
+    PIE1bits.SSPIE = 1;         // Habilitamos interrupci贸n MSSP
     TRISAbits.TRISA5 = 1;       // Slave Select
    
-    spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+    spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);// inicialicacion de SPI slave
     a = 0;
 
 }
