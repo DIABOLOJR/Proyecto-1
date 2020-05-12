@@ -26,7 +26,7 @@ cstackBANK0 BANK0 1 3C 3C 16 1
 bssBANK0 BANK0 1 20 20 1C 1
 strings STRING 0 3 3 39 2
 clrtext CODE 0 5A8 5A8 8 2
-$C:\Users\egman\AppData\Local\Temp\sc68.o
+$C:\Users\egman\AppData\Local\Temp\s25o.o
 end_init CODE 0 0 0 3 2
 config CONFIG 0 2007 2007 2 2
 # %UNUSED Section
@@ -74,16 +74,16 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\slave.X.production.o
-7F3 cinit CODE >948:C:\Users\egman\AppData\Local\Temp\sc68.s
-7F3 cinit CODE >951:C:\Users\egman\AppData\Local\Temp\sc68.s
-7F3 cinit CODE >1004:C:\Users\egman\AppData\Local\Temp\sc68.s
-7F4 cinit CODE >1005:C:\Users\egman\AppData\Local\Temp\sc68.s
-7F5 cinit CODE >1006:C:\Users\egman\AppData\Local\Temp\sc68.s
-7F6 cinit CODE >1007:C:\Users\egman\AppData\Local\Temp\sc68.s
-7F7 cinit CODE >1008:C:\Users\egman\AppData\Local\Temp\sc68.s
-7FC cinit CODE >1014:C:\Users\egman\AppData\Local\Temp\sc68.s
-7FC cinit CODE >1016:C:\Users\egman\AppData\Local\Temp\sc68.s
-7FD cinit CODE >1017:C:\Users\egman\AppData\Local\Temp\sc68.s
+7F3 cinit CODE >948:C:\Users\egman\AppData\Local\Temp\s25o.s
+7F3 cinit CODE >951:C:\Users\egman\AppData\Local\Temp\s25o.s
+7F3 cinit CODE >1004:C:\Users\egman\AppData\Local\Temp\s25o.s
+7F4 cinit CODE >1005:C:\Users\egman\AppData\Local\Temp\s25o.s
+7F5 cinit CODE >1006:C:\Users\egman\AppData\Local\Temp\s25o.s
+7F6 cinit CODE >1007:C:\Users\egman\AppData\Local\Temp\s25o.s
+7F7 cinit CODE >1008:C:\Users\egman\AppData\Local\Temp\s25o.s
+7FC cinit CODE >1014:C:\Users\egman\AppData\Local\Temp\s25o.s
+7FC cinit CODE >1016:C:\Users\egman\AppData\Local\Temp\s25o.s
+7FD cinit CODE >1017:C:\Users\egman\AppData\Local\Temp\s25o.s
 594 text7 CODE >29:C:\Users\egman\Desktop\Proyecto-1\NUEVOS CODIGOS PROYECTO1\slave.X/uart.h
 594 text7 CODE >31:C:\Users\egman\Desktop\Proyecto-1\NUEVOS CODIGOS PROYECTO1\slave.X/uart.h
 599 text7 CODE >32:C:\Users\egman\Desktop\Proyecto-1\NUEVOS CODIGOS PROYECTO1\slave.X/uart.h
@@ -180,16 +180,16 @@ $dist/default/production\slave.X.production.o
 701 maintext CODE >77:C:\Users\egman\Desktop\Proyecto-1\NUEVOS CODIGOS PROYECTO1\slave.X\slave.c
 709 maintext CODE >79:C:\Users\egman\Desktop\Proyecto-1\NUEVOS CODIGOS PROYECTO1\slave.X\slave.c
 712 maintext CODE >80:C:\Users\egman\Desktop\Proyecto-1\NUEVOS CODIGOS PROYECTO1\slave.X\slave.c
-5A8 clrtext CODE >991:C:\Users\egman\AppData\Local\Temp\sc68.s
-5A8 clrtext CODE >992:C:\Users\egman\AppData\Local\Temp\sc68.s
-5A9 clrtext CODE >993:C:\Users\egman\AppData\Local\Temp\sc68.s
-5A9 clrtext CODE >994:C:\Users\egman\AppData\Local\Temp\sc68.s
-5AA clrtext CODE >995:C:\Users\egman\AppData\Local\Temp\sc68.s
-5AB clrtext CODE >996:C:\Users\egman\AppData\Local\Temp\sc68.s
-5AC clrtext CODE >997:C:\Users\egman\AppData\Local\Temp\sc68.s
-5AD clrtext CODE >998:C:\Users\egman\AppData\Local\Temp\sc68.s
-5AE clrtext CODE >999:C:\Users\egman\AppData\Local\Temp\sc68.s
-5AF clrtext CODE >1000:C:\Users\egman\AppData\Local\Temp\sc68.s
+5A8 clrtext CODE >991:C:\Users\egman\AppData\Local\Temp\s25o.s
+5A8 clrtext CODE >992:C:\Users\egman\AppData\Local\Temp\s25o.s
+5A9 clrtext CODE >993:C:\Users\egman\AppData\Local\Temp\s25o.s
+5A9 clrtext CODE >994:C:\Users\egman\AppData\Local\Temp\s25o.s
+5AA clrtext CODE >995:C:\Users\egman\AppData\Local\Temp\s25o.s
+5AB clrtext CODE >996:C:\Users\egman\AppData\Local\Temp\s25o.s
+5AC clrtext CODE >997:C:\Users\egman\AppData\Local\Temp\s25o.s
+5AD clrtext CODE >998:C:\Users\egman\AppData\Local\Temp\s25o.s
+5AE clrtext CODE >999:C:\Users\egman\AppData\Local\Temp\s25o.s
+5AF clrtext CODE >1000:C:\Users\egman\AppData\Local\Temp\s25o.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -225,19 +225,19 @@ _SPEN C7 0 ABS 0 - dist/default/production\slave.X.production.o
 _SYNC 4C4 0 ABS 0 - dist/default/production\slave.X.production.o
 _TRMT 4C1 0 ABS 0 - dist/default/production\slave.X.production.o
 _TXEN 4C5 0 ABS 0 - dist/default/production\slave.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\egman\AppData\Local\Temp\sc68.o
+___sp 0 0 STACK 2 stack C:\Users\egman\AppData\Local\Temp\s25o.o
 _main CEE 0 CODE 0 maintext dist/default/production\slave.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\slave.X.production.o
-start 0 0 CODE 0 init C:\Users\egman\AppData\Local\Temp\sc68.o
+start 0 0 CODE 0 init C:\Users\egman\AppData\Local\Temp\s25o.o
 __size_of___aldiv 0 0 ABS 0 - dist/default/production\slave.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\slave.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\egman\AppData\Local\Temp\sc68.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\egman\AppData\Local\Temp\sc68.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\egman\AppData\Local\Temp\sc68.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\egman\AppData\Local\Temp\sc68.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\egman\AppData\Local\Temp\sc68.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\egman\AppData\Local\Temp\sc68.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\egman\AppData\Local\Temp\s25o.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\egman\AppData\Local\Temp\s25o.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\egman\AppData\Local\Temp\s25o.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\egman\AppData\Local\Temp\s25o.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\egman\AppData\Local\Temp\s25o.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\egman\AppData\Local\Temp\s25o.o
 ___aldiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\slave.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\slave.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -249,8 +249,8 @@ __size_of_spiInit 0 0 ABS 0 - dist/default/production\slave.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 __end_of___aldiv CEE 0 CODE 0 text6 dist/default/production\slave.X.production.o
 __CFG_FOSC$INTRC_CLKOUT 0 0 ABS 0 - dist/default/production\slave.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\egman\AppData\Local\Temp\sc68.o
-___stacklo 0 0 ABS 0 - C:\Users\egman\AppData\Local\Temp\sc68.o
+___stackhi 0 0 ABS 0 - C:\Users\egman\AppData\Local\Temp\s25o.o
+___stacklo 0 0 ABS 0 - C:\Users\egman\AppData\Local\Temp\s25o.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\slave.X.production.o
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\slave.X.production.o
 spiInit@sDataSample 70 0 COMMON 1 cstackCOMMON dist/default/production\slave.X.production.o
@@ -267,7 +267,7 @@ _TRISC3 43B 0 ABS 0 - dist/default/production\slave.X.production.o
 _TRISC5 43D 0 ABS 0 - dist/default/production\slave.X.production.o
 _TRISC6 43E 0 ABS 0 - dist/default/production\slave.X.production.o
 _TRISC7 43F 0 ABS 0 - dist/default/production\slave.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\egman\AppData\Local\Temp\sc68.o
+___int_sp 0 0 STACK 2 stack C:\Users\egman\AppData\Local\Temp\s25o.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -316,7 +316,7 @@ __CFG_BOR4V$BOR40V 0 0 ABS 0 - dist/default/production\slave.X.production.o
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\slave.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
 __stringtab 6 0 STRING 0 strings dist/default/production\slave.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\egman\AppData\Local\Temp\sc68.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\egman\AppData\Local\Temp\s25o.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 ___aldiv BB4 0 CODE 0 text6 dist/default/production\slave.X.production.o
 __pmaintext CEE 0 CODE 0 maintext dist/default/production\slave.X.production.o
